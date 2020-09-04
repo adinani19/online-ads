@@ -1,0 +1,151 @@
+body{
+    position: relative;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 24px;
+    border-bottom:1px solid orange;
+}
+.logo{
+    width: 200px;
+    margin-bottom: 12px;
+}
+.my-list{
+    display: flex;
+    list-style: none;
+    padding: 1px;
+}
+.item{
+    
+    
+}
+
+.my-list .item a{
+    text-align: center;
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: #FF5E14;
+    margin: 0 2px;
+    transition: all .25s ease;
+    color: white;
+    border-radius: 25%;
+}
+
+.my-list .item a:hover,
+.my-list .item a:active{
+    background: transparent;
+    color: black;
+    border-color:black ;
+}
+
+
+/************************************/
+            /* SIGN UP FORM */
+/************************************/
+.signup-section{
+    display:flex;
+    justify-content: center;
+    /* margin: 0px 0px 20px 0px; */
+}
+
+.signup-form{
+    display: flex;
+    flex-direction: column;
+}
+.signup-form article{
+    margin-bottom: 8px;
+}
+
+.signup-form article:last-of-type{
+    margin-top: 16px;
+    text-align: center;
+}
+
+.signup-form article .btn-custom{
+    padding: 8px 16px;
+    border-radius: 10px;
+}
+
+.signup-form article .form{
+    display: block;
+    padding: 8px 6px;
+    width: 100%;
+}
+.btn-custom{
+    border-color:orange;
+    background-color:#FF5E14;
+    color:white;
+}
+.btn-custom:hover{
+    background-color: transparent;
+    color: black;
+    border-color: #FF5E14;
+}
+
+
+/************************************/
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    font-size: 15px;
+    color: #FF5E14;
+}
+
+
+
+/************************************/
+            /* PRODUCT */
+/************************************/
+.product-section{
+    /* display:flex; */
+    /* overflow: none; */
+    width: 90%;
+    margin: 0 auto 15px auto;
+}
+.product{
+    height: 200px;
+    /* border: thin solid #eee; */
+    margin: 8px;
+    width: 250px;
+    position: relative;
+    text-align: center;
+    transition: all .25s;
+    display: inline-block;
+    border-bottom: 2px solid #FF5E14;
+}
+.product img{
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+    margin-top: 12px;
+}
+.product .description{
+    position: absolute;
+    bottom: 0;
+    padding: 8px 8px 0 8px;
+    text-align: left;
+    font-size: 12px;
+}
+
+.product:hover{
+    transform: scale(1.05);
+    box-shadow: 0 2px 5px #eee;
+}
+.custom{
+    color:white;
+    background-color:#FF5E14;
+    border-radius: 30%;
+    
+}
+.custom:hover{
+    color:black;
+    padding: 2px;
+    background-color: transparent;
+    border-color:#FF5E14;
+}
