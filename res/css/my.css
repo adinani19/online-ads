@@ -1,123 +1,193 @@
+/* Primary: #9cbdca */
+/* Secondary: #7ddcff */
+/* Accent:  */
+@font-face{
+    src: url('../fonts/Lato-Regular.ttf');
+    font-family: 'Lato';
+}
 body{
     position: relative;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    background-color: #eee;
+    font-family: Lato, sans-serif;
 }
 header{
+    background-color: #fff;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    margin-bottom: 24px;
-    border-bottom:1px solid orange;
+    justify-content: space-between;
+    padding: 8px;
 }
 .logo{
     width: 200px;
-    margin-bottom: 12px;
 }
-.my-list{
-    display: flex;
-    list-style: none;
-    padding: 1px;
-}
-.item{
-    
-    
-}
-
-.my-list .item a{
-    text-align: center;
-    padding: 8px 16px;
+nav a:link,
+nav a:visited{
+    padding: 8px;
     text-decoration: none;
-    background-color: #FF5E14;
-    margin: 0 2px;
-    transition: all .25s ease;
-    color: white;
-    border-radius: 25%;
+    color: #9cbdca;
+    font-size: 120%;
+}
+nav a:hover,
+nav a:active,
+nav a.active{
+    color: #7ddcff;
 }
 
-.my-list .item a:hover,
-.my-list .item a:active{
-    background: transparent;
-    color: black;
-    border-color:black ;
+h3{
+    font-size: 160%;
+    margin: 0 0 12px 0;
 }
-
+/***
+ * MAIN SECTION 
+ */
+.main-section{
+    margin-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: flex-start;
+    width: 90%;
+} 
+.main-section aside{
+    width: 20%;
+    border: 1px solid #bce8f1;
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 0 8px;
+}
+.main-section aside header{
+    color: #31708f;
+    background-color: #d9edf7;
+    text-transform: uppercase;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+.main-section aside .list div{
+    padding: 8px;
+    border-bottom: 1px solid #bce8f1;
+}
+/* .main-section aside .list div:last-of-type{
+    border-bottom: none;
+} */
+.main-section aside .list div:last-child{
+    border-bottom: none;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.main-section aside .list div:hover,
+.main-section aside .list div.active{
+    background-color: #eee;
+}
+.badge{
+    color: #fff;
+    background-color: #444;
+    border-radius: 20px;
+    padding: 0 6px;
+    /* font-size: 95%; */
+    float: right;
+}
+.main-section main{
+    width: 80%;
+    padding-bottom: 25px;
+}
 
 /************************************/
             /* SIGN UP FORM */
 /************************************/
-.signup-section{
+.section{
     display:flex;
     justify-content: center;
-    /* margin: 0px 0px 20px 0px; */
+    align-items: center;
+    margin-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 90%;
 }
 
-.signup-form{
+.section .form{
     display: flex;
     flex-direction: column;
+    background-color: #fff;
+    padding: 16px;
+    width: 400px;
+    border-radius: 0;
 }
-.signup-form article{
-    margin-bottom: 8px;
+.section .form .logo{
+    margin-bottom: 35px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.section .form article{
+    margin-bottom: 12px;
 }
 
-.signup-form article:last-of-type{
+.section .form article:last-of-type{
     margin-top: 16px;
     text-align: center;
 }
 
-.signup-form article .btn-custom{
-    padding: 8px 16px;
-    border-radius: 10px;
+.section .form article label{
+    font-size: 115%;
+    font-weight: bold
+}
+.section .form article .form-input{
+    display: block;
+    padding: 10px 6px;
+    width: 100%;
+    border-radius: 0;
+    border: 1px solid #eee;
+    outline: none;
+    margin-top: 6px;
 }
 
-.signup-form article .form{
-    display: block;
-    padding: 8px 6px;
-    width: 100%;
+.section .form p{
+    text-align: center;
+}
+.section .form p a:link,
+.section .form p a:visited{
+    color: #444;
+    text-decoration: none;
 }
 .btn-custom{
-    border-color:orange;
-    background-color:#FF5E14;
+    background-color: #063546;
     color:white;
+    padding: 10px 16px;
+    border: 1px solid #9cbdca;
+    transition: all .25s ease;
+}
+.btn-block{
+    width: 100%;
 }
 .btn-custom:hover{
     background-color: transparent;
-    color: black;
-    border-color: #FF5E14;
+    color: #063546;
 }
-
-
-/************************************/
-
-footer{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    left: 0;
-    text-align: center;
-    font-size: 15px;
-    color: #FF5E14;
-}
-
 
 
 /************************************/
             /* PRODUCT */
 /************************************/
-.product-section{
-    /* display:flex; */
-    /* overflow: none; */
-    width: 90%;
-    margin: 0 auto 15px auto;
+.product-section a:link,
+.product-section a:visited{
+    text-decoration: none;
+    color: #444;
 }
-.product{
-    height: 200px;
-    /* border: thin solid #eee; */
+.product-section .product{
+    height: 250px;
+    border: thin solid #eee;
     margin: 8px;
     width: 250px;
     position: relative;
-    text-align: center;
-    transition: all .25s;
+    transition: all .25s ease;
     display: inline-block;
-    border-bottom: 2px solid #FF5E14;
+    background-color: #fff;
+    box-shadow: 0 0 3px #b7b4b7;
+    border-radius: 4px;
+    overflow: hidden;
 }
 .product img{
     height: 150px;
@@ -134,8 +204,30 @@ footer{
 }
 
 .product:hover{
-    transform: scale(1.05);
-    box-shadow: 0 2px 5px #eee;
+    box-shadow: 0 0 5px #444;
+}
+
+/************************************/
+            /* PRODUCT  VIEW*/
+/************************************/
+.product-view{
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 45px;
+}
+.product-view img{
+    margin-top: 4px;
+    margin-bottom: 16px;
+    width: 100%;
+    object-fit: cover;
+    border: 1px solid #eee;
+}
+.product-view div{
+    margin: 4px 0 16px 0;
+}
+.product-view .description{
+    font-size: 110%;
 }
 .custom{
     color:white;
@@ -148,4 +240,17 @@ footer{
     padding: 2px;
     background-color: transparent;
     border-color:#FF5E14;
+}
+
+/***
+ * FOOTER
+ */
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    font-size: 13px;
+    color: #999;
 }

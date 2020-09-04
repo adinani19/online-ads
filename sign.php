@@ -1,75 +1,50 @@
 <!DOCTYPE html>
  <html>
-	 <head>
-	 	<title>home</title>
-	 	<link rel="stylesheet" type="text/css" href="style/my.css">
-	 </head>
-	 <body>
-	 	<header>
-	 		<img class="logo" src="images/logo.png" alt="my logo">
-	 		<nav>
-	 			<ul class="my-list">
-	 				<li class="item"><a href="home.php">Home</a></li>
-	 				<li class="item"><a href="login.php">Login</a></li>
-	 				<li class="item"><a href="logout.php">Logout</a></li>
-	 			</ul>
-	 		</nav>
-	 	</header>
-	 	<section class="signup-section">
-	 		<form method="POST" action="sign.php" class="signup-form">
-	 			<article>
-				 	<label>Username</label>
-					<input class="form" type="text" name="name" placeholder="username" required>
-				</article>
-				<article>
-					<label>Email</label>
-				 	<input class="form" type="email" name="email" placeholder="email" required>
-				</article>
-				<article>
-					<label>Sex</label>
-					<input type="radio" name="sex" value="male" id="male">
-					<label for="male">Male</label>
-					<input type="radio" name="sex" value="female" id="female">
-					<label for="female">Female</label>
-				</article>
-				<article>
-					<label>Password</label>
-					<input class="form"  type="password" name="password" placeholder="password" required>
-				</article>
-	 			<article>
-				 	<input class="btn-custom"  type="submit" name="submit" value="jisajili">
-				</article>
-	 		</form>
-	 		<?php 
-				require_once('config/connect.php');
+ <head>
+        <title>Register - MoreAds</title>
+        <link rel="stylesheet" type="text/css"  href="res/css/my.css">
+    </head>
+    <body>
+        <section class="section">
+            <form method="POST" action="sign.php" class="form">
 
-				if(isset($_POST['submit'])){
+                <img class="logo" src="res/images/logo.png" alt="my logo">
 
-					$username = mysqli_real_escape_string($con, $_POST['name']);	 			
-					$email = mysqli_real_escape_string($con, $_POST['email']);
-					$gender = mysqli_real_escape_string($con, $_POST['sex']);
-					$pass = mysqli_real_escape_string($con, $_POST['password']);
-		
-					$sql1="INSERT INTO user (name,email,sex,password) values ('$username','$email','$gender','$pass')";
-						
-					$query=mysqli_query($con,$sql1);
-
-						if(!mysqli_error($con)){
-							header("location:login.php");
-						}else{
-							die(mysqli_error($con));
-						}
-				}
-					
-				mysqli_close($con);
-			 ?>
-			 
-		 </section>
-		 <section>
-			 <p style="text-align:center">already sign in?, <a href="login.php">click here to login</a></p>
-		 </section>		
-		 <footer>
-        	<!-- &copy; 2020 Tangaza Nasi.  -->
-   		 </footer>
-	 </body>
- </html> 
+                <article>
+                    <label>First name</label>
+                    <input class="form-input" type="text" name="fname" placeholder="first name" required>
+                </article>
+                <article>
+                    <label>surname</label>
+                    <input class="form-input" type="text" name="sname" placeholder="sur name" required>
+                </article>
+                <article>
+                    <label>Phone number</label>
+                    <input class="form-input" type="text" name="phone" placeholder="phone number" required>
+                </article>
+                <article>
+                    <label>Gender</label>
+                    <input type="radio" name="gender" id="male" required>
+                    <label for="male"></label>
+                    <input type="radio" name="gender" id="female" required>
+                    <label for="female"></label>
+                </article>
+                <article>
+                    <label>Email</label>
+                    <input class="form-input"  type="email" name="email" placeholder="email" required>
+                </article>
+                <article>
+                    <label>Password</label>
+                    <input class="form-input"  type="password" name="password" placeholder="password" required>
+                </article>
+                <article>
+                    <button class="btn-custom btn-block" type="submit" name="login">Ingia</button>
+                </article>
+                <p>Already registered? <a href="login.php">Login</a></p>
+            </form>
+        </section>
+        <footer>
+            &copy; 2020 More Ads, All Rights Reserved.
+        </footer>
+     </body>
+</html>

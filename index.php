@@ -4,58 +4,83 @@
 ?>
 <html>
     <head>
-        <title>Home</title>
+        <title>Home - MoreAds</title>
         <link rel="stylesheet" type="text/css"  href="res/css/my.css">
     </head>
     <body>
     <header>
         <img class="logo" src="res/images/logo.png" alt="my logo">
-	 		<nav>
-	 			<ul class="my-list">
-	 				<li class="item"><a href="home.php">Home</a></li>
-	 				<li class="item"><a href="login.php">Login</a></li>
-	 				<li class="item"><a href="logout.php">Logout</a></li>
-	 			</ul>
-	 		</nav>
-        </header>
-        <section class="product-section">
-        <?php
-            $query="select * from bidhaa";
-            $result=mysqli_query($con,$query);
-            if(!mysqli_error($con)){
-                if(mysqli_num_rows($result)>0){
-                    while($row = mysqli_fetch_assoc($result)){
-                        ?>
-                                <div class="product">									
-                                    <img src="images/<?php echo $row['prod_photo']; ?>">
-                                    <div class="description"><?php echo $row['prod_description']; ?>"</div>
-                                </div>
-    
-                        <?php		
-                    }
-                }
+        <nav>
+            <a href="" class="active">Home</a>
+            <a href="login.php">Login</a>
+            <a href="sign.php">Register</a>
+        </nav>
+    </header>
+    <section class="main-section">
+        <aside>
+            <header>Categories</header>
+            <section class="list">
+                <div>All <span class="badge">10</span></div>
+                <div>Food &amp; Drinks <span class="badge">10</span></div>
+                <div>Home Appliances <span class="badge">10</span></div>
+                <div>Clothes &amp; Designs <span class="badge">10</span></div>
+            </section>
+        </aside>
 
-            }else{
-                echo "Failed. there was an error." . mysqli_error($con);
-            }
-            mysqli_close($con);
-        ?>
-            
-        </section>
-        <section class="signup-section">
-            <article>
-                <form method="POST" action="sign.php" class="signup-form">
-                    <button class="btn-custom" name="batani"> Bofya hapa kuweka tangazo lako</button>
-                </form>
-            </article>                
-            <?php
-                if(isset($_POST['batani'])){
-                    header("location:sign.php");
-                }
-            ?>
-        </section>
-        <footer>
-			 &copy; 2020 Tangaza Nasi.
-         </footer>
+        <main class="product-section">
+            <a href="view.php">
+                <div class="product">									
+                    <img src="res/images/logo.png">
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet pariatur numqu illum porro non quidem nat.</div>
+                </div>
+            </a>
+            <a href="">
+                <div class="product">									
+                    <img src="res/images/logo.png">
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet pariatur numqu illum porro non quidem nat.</div>
+                </div>
+            </a>
+            <a href="">
+                <div class="product">									
+                    <img src="res/images/logo.png">
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet pariatur numqu illum porro non quidem nat.</div>
+                </div>
+            </a>
+            <a href="">
+                <div class="product">									
+                    <img src="res/images/logo.png">
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet pariatur numqu illum porro non quidem nat.</div>
+                </div>
+            </a>
+            <a href="">
+                <div class="product">									
+                    <img src="res/images/logo.png">
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet pariatur numqu illum porro non quidem nat.</div>
+                </div>
+            </a>
+            <a href="">
+                <div class="product">									
+                    <img src="res/images/logo.png">
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet pariatur numqu illum porro non quidem nat.</div>
+                </div>
+            </a>
+            <a href="">
+                <div class="product">									
+                    <img src="res/images/logo.png">
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet pariatur numqu illum porro non quidem nat.</div>
+                </div>
+            </a>
+            <a href="">
+                <div class="product">									
+                    <img src="res/images/logo.png">
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet pariatur numqu illum porro non quidem nat.</div>
+                </div>
+            </a>
+        </main>
+    </section>
+
+    <footer>
+        &copy; 2020 More Ads, All Rights Reserved.
+    </footer>
     </body>
 </html>
